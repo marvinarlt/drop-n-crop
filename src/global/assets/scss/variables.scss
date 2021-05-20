@@ -1,0 +1,40 @@
+// Colors
+/////////////////////////////////
+$primary: #03cea4;
+$secondary: #e54888;
+$light: #f6f8ff;
+$text: #a1a7bb;
+$textDark: #696d80;
+$border: #2f2f43;
+$backgroundLight: #222230;
+$background: #1b1b2a;
+
+// Font
+/////////////////////////////////
+$mainFont: "Lexend", "Sora", "Poppins", "Roboto", "Segeo UI", sans-serif;
+
+$baseFontSize: 16px;
+$baseLineHeight: 1.75em;
+
+$weightRegular: 400;
+$weightBold: 700;
+
+// Additional
+/////////////////////////////////
+$baseTransition: 300ms cubic-bezier(0.75, 0, 0.25, 1);
+$baseBorder: 2px solid $border;
+$maxWidth: 1144px;
+
+// Breakpoints
+/////////////////////////////////
+$breakpoints: (
+    tiny: 480px,
+    small: 640px,
+    medium: 760px,
+    large: 992px,
+    giant: $maxWidth,
+    huge: 1350px,
+    sideBarBreak: 1700px
+);
+
+@import "mixins";

@@ -1,0 +1,56 @@
+@import "./../../../global/assets/scss/variables";
+
+.image-sizes {
+    padding: 1rem 0;
+
+    .image-size-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .checkbox {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.size-input-container {
+    display: flex;
+    align-items: center;
+
+    .size-input-label {
+        display: block;
+        margin-right: 1rem;
+    }
+
+    .size-input-field {
+        appearance: none;
+        display: block;
+        width: 4rem;
+        padding: 0.5rem 0;
+        background-color: transparent;
+        color: $light;
+        border: none;
+        border-bottom: $baseBorder;
+        line-height: $baseLineHeight;
+        font: {
+            family: $mainFont;
+            size: $baseFontSize;
+            weight: $weightRegular;
+        }
+        transition: $baseTransition;
+
+        &::placeholder {
+            color: $textDark;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom-color: $primary;
+        }
+    }
+}

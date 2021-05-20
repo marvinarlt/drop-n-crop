@@ -1,0 +1,17 @@
+@import "./../../../global/assets/scss/variables";
+
+.download-item {
+    .download-label {
+        margin-top: 1rem;
+
+        .download-name {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: $light;
+        }
+
+        .download-size {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "./../../../../global/assets/scss/variables";
+
+.text-input-container {
+    margin-bottom: 2rem;
+
+    .text-input-label {
+        display: block;
+        color: $text;
+        font-size: 0.8rem;
+        line-height: $baseLineHeight;
+    }
+
+    .text-input-field {
+        appearance: none;
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+        background-color: transparent;
+        color: $light;
+        border: none;
+        border-bottom: $baseBorder;
+        line-height: $baseLineHeight;
+        font: {
+            family: $mainFont;
+            size: $baseFontSize;
+            weight: $weightRegular;
+        }
+        transition: $baseTransition;
+
+        &::placeholder {
+            color: $textDark;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom-color: $primary;
+        }
+    }
+}

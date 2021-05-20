@@ -1,0 +1,14 @@
+@import "./../../../global/assets/scss/variables";
+
+.download-element {
+    padding-bottom: 4rem;
+    
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+        border-bottom: $baseBorder;
+    }
+
+    .swiper-wrapper {
+        align-items: flex-end;
+    }
+}

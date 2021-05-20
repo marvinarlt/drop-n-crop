@@ -1,0 +1,106 @@
+@import "variables";
+@import "fonts";
+
+* {
+    box-sizing: border-box;
+    scrollbar-color: $textDark $border;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    background-color: $border;
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $textDark;
+    border-radius: 0.3rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $mainFont;
+    font-size: $baseFontSize;
+    background-color: $background;
+    color: $text;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+
+    tr {
+        &:not(:last-child) {
+            border-bottom: $baseBorder;
+        }
+
+        th,
+        td {
+            padding: 1rem 2rem;
+
+            &:not(:last-child) {
+                border-right: $baseBorder;
+            }
+        }
+
+        th {
+            color: $light;
+            font-weight: $weightRegular;
+            text-align: left;
+        }
+
+        td {
+            position: relative;
+
+            .delete {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 0.5rem;
+                transform: translateY(-60%);
+                font-size: 2rem;
+                line-height: 1rem;
+                color: $textDark;
+                transition: $baseTransition;
+
+                svg {
+                    fill: $textDark;
+                    transition: $baseTransition;
+                }
+
+                &:hover {
+                    color: $secondary;
+
+                    svg {
+                        fill: $secondary;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .delete {
+                color: $primary;
+
+                svg {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}

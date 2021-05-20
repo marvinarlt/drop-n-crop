@@ -1,0 +1,73 @@
+@import "./../../../global/assets/scss/variables";
+
+.app-side-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 22.5rem;
+    height: 100%;
+    background-color: $backgroundLight;
+    border-left: $baseBorder;
+    transform: translateX(100%);
+    transition: $baseTransition;
+    z-index: 1;
+
+    .side-bar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 5rem;
+        padding: 0 2rem;
+        border-bottom: $baseBorder;
+
+        .side-bar-label {
+            position: relative;
+            display: block;
+            color: $light;
+            font-size: 1.25rem;
+            font-weight: $weightBold;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(3rem, -50%);
+                width: 2rem;
+                height: 0.125rem;
+                background-color: $primary;
+            }
+        }
+
+        .side-bar-close {
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 1.5rem;
+            transition: $baseTransition;
+
+            &:hover {
+                background-color: $border;
+            }
+
+            svg {
+                fill: $text;
+            }
+        }
+    }
+
+    .side-bar-content {
+        height: auto;
+        max-height: calc(100vh - 5rem);
+        overflow: auto;
+        padding: 2rem;
+    }
+
+    &.active {
+        transform: translateX(0);
+    }
+}

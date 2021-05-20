@@ -1,0 +1,24 @@
+{
+  "name": "drop-n-crop",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "cropperjs": "^1.5.11",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.6.0",
+    "slugify": "^1.5.3",
+    "swiper": "^6.6.2",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/compiler-sfc": "^3.0.5",
+    "sass": "^1.32.13",
+    "vite": "^2.3.3",
+    "vite-svg-loader": "^1.5.1"
+  }
+}

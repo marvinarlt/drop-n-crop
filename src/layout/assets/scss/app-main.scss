@@ -1,0 +1,12 @@
+@import "./../../../global/assets/scss/variables";
+
+.app-main {
+    padding: 0 2rem;
+    transition: $baseTransition;
+    
+    @include breakpoint(sideBarBreak) {
+        &.side-bar-opened {
+            margin-right: 22.5rem;
+        }
+    }
+}

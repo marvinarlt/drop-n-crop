@@ -1,0 +1,16 @@
+@mixin breakpoint($nameOrWidth, $minOrMax: min) {
+    @each $breakpointName, $breakpointWidth in $breakpoints {
+        @if $minOrMax == max or $minOrMax == min {
+            @if $nameOrWidth == $breakpointName {
+                @media screen and (#{$minOrMax}-width: $breakpointWidth) {
+                    @content;
+                }
+            }
+            @else {
+                @media screen and (#{$minOrMax}-width: $nameOrWidth) {
+                    @content;
+                }
+            }
+        }
+    }
+}

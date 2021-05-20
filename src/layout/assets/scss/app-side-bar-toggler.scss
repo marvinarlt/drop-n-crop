@@ -1,0 +1,19 @@
+@import "./../../../global/assets/scss/variables";
+
+.app-side-bar-toggler {
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    transition: $baseTransition;
+
+    &:hover {
+        background-color: $border;
+    }
+
+    svg {
+        fill: $text;
+    }
+}

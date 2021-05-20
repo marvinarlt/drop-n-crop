@@ -1,0 +1,84 @@
+@import "./../../../global/assets/scss/variables";
+
+.cropping-element {
+    position: relative;
+    margin-bottom: 4rem;
+
+    .element-count {
+        position: absolute;
+        top: 0;
+        right: calc(100% + 2rem);
+        color: $border;
+        font: {
+            size: 2rem;
+            weight: $weightBold;
+        }
+        transition: $baseTransition;
+        visibility: hidden;
+        opacity: 0;
+
+        @include breakpoint(huge) {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .cropping-input {
+        margin-bottom: 2rem;
+        
+        .text-input-container {
+            max-width: 16rem;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    padding-bottom: 6rem;
+
+    .swiper-controls {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+
+        .navigation-prev,
+        .navigation-next {
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            width: 3rem;
+            height: 3rem;
+            background-color: $border;
+            border-radius: 3rem;
+            transition: $baseTransition;
+
+            &.swiper-button-disabled {
+                cursor: default;
+                opacity: 0.5;
+            }
+
+            svg {
+                fill: $text;
+                transition: $baseTransition;
+            }
+
+            &:hover:not(.swiper-button-disabled) {
+                svg {
+                    fill: $primary;
+                }
+            }
+        }
+
+        .navigation-prev {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        .navigation-next {
+            margin-left: 1rem;
+        }
+    }
+}

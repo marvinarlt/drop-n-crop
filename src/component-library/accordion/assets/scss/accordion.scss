@@ -1,0 +1,47 @@
+@import "./../../../../global/assets/scss/variables";
+
+.accordion {
+    width: 100%;
+    
+    .accordion-title {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem 1rem 0;
+        margin-bottom: 1rem;
+        color: $text;
+        border-bottom: $baseBorder;
+        transition: $baseTransition;
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            svg {
+                fill: $text;
+                transform: rotate(-90deg);
+                transition: $baseTransition;
+            }
+        }
+    }
+
+    .accordion-content {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: $baseTransition;
+    }
+
+    &.opened {
+        .accordion-title {
+            border-bottom-color: $textDark;
+        }
+
+        .icon svg {
+            transform: rotate(0);
+        }
+    }
+}

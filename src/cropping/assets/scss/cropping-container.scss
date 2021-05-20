@@ -1,0 +1,8 @@
+@import "./../../../global/assets/scss/variables";
+
+.cropping-container {
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 10rem 0;
+}

@@ -1,0 +1,41 @@
+@import "./../../../../global/assets/scss/variables";
+
+.button {
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    background-color: $primary;
+    color: $light;
+    border: none;
+    border-radius: 2rem;
+    font: {
+        family: $mainFont;
+        size: $baseFontSize;
+    }
+    line-height: $baseLineHeight;
+    transition: $baseTransition;
+
+    &.full-width {
+        width: 100%;
+    }
+
+    &.secondary {
+        background-color: $border;
+
+        &:hover {
+            background-color: lighten($border, 5%);
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: $secondary;
+    }
+}
