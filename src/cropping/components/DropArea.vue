@@ -1,5 +1,11 @@
 <template>
-    <input type="file" name="File upload" class="hidden" ref="fileUpload" multiple @change="uploadFilesFromInput">
+    <input class="hidden"
+        type="file"
+        name="File upload"
+        ref="fileUpload"
+        accept="image/jpg, image/jpeg, image/png"
+        multiple 
+        @change="uploadFilesFromInput">
     <div class="drop-area"
         :class="isDraggingOver ? 'dragging-over' : ''"
         @drop.prevent="uploadDroppedFiles"
@@ -43,10 +49,10 @@ export default {
         uploadFilesFromInput(event) {
             this.uploadFiles(event.target.files);
         },
-        onDragEnter(event) {
+        onDragEnter() {
             this.isDraggingOver = true;
         },
-        onDragLeave(event) {
+        onDragLeave() {
             this.isDraggingOver = false;
         },
         openFileUploadWindow() {

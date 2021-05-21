@@ -50,7 +50,13 @@ export default {
         },
         {
             name: 'huge',
-            width: 1660,
+            width: 1364,
+            height: 640,
+            active: true
+        },
+        {
+            name: 'full',
+            width: 1520,
             height: 640,
             active: true
         }

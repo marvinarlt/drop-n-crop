@@ -88,38 +88,11 @@ export default {
                 width: this.breakpoint.width,
                 height: this.breakpoint.height,
             });
-            let compressionRate = this.settingsState.options.compressImages.checked ? 0.85 : 1;
-            let imageData = croppedCanvas.toDataURL('image/jpeg', compressionRate);
-            let imageBase64 = this.getBase64FromDataURL(imageData);
-            let imageBlob = this.base64ToBlob(imageBase64, 'image/jpeg');
 
-            CroppingStore.addCroppedImage(this.count, {
-                name: this.imageFileName,
-                width: this.breakpoint.width,
-                height: this.breakpoint.height,
-                blob: imageBlob
+            CroppingStore.saveCroppedCanvas(croppedCanvas, this.count, {
+                fileName: this.imageFileName,
+                compress: this.settingsState.options.compressImages.checked
             });
-        },
-        base64ToBlob(base64Data, contentType = '', sliceSize = 512) {
-            let byteCharacters = atob(base64Data);
-            let byteArrays = [];
-
-            for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-                let slice = byteCharacters.slice(offset, offset + sliceSize);
-                let byteNumbers = new Array(slice.length);
-
-                for (let index = 0; index < slice.length; index++) {
-                    byteNumbers[index] = slice.charCodeAt(index);
-                }
-
-                let byteArray = new Uint8Array(byteNumbers);
-                byteArrays.push(byteArray);
-            }
-
-            return new Blob(byteArrays, {type: contentType});
-        },
-        getBase64FromDataURL(dataURL) {
-            return dataURL.replace(/^data:image\/(png|jpg|jpeg);base64,/, '');
         }
     }
 }

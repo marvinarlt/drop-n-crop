@@ -42,8 +42,6 @@ export default {
         filteredCroppedImages() {
             let croppedImages = this.croppingState.croppedImages;
 
-            console.log(croppedImages);
-
             for (let croppedImagesIndex in croppedImages) {
                 let croppedImagesByBreakpoint = croppedImages[croppedImagesIndex];
                 let filteredCroppedImagesByBreakpoint = croppedImagesByBreakpoint.filter(croppedImages => croppedImages != null);

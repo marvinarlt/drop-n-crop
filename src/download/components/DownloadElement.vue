@@ -4,7 +4,7 @@
             :slides-per-view="1"
             :space-between="32"
             :breakpoints="swiperBreakpoints"
-            :allow-touch-move="false"
+            :free-mode="true"
             :navigation="swiperNavigation">
             <div class="swiper-controls">
                 <div class="navigation-prev">
